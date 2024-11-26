@@ -1,8 +1,9 @@
 # CheckoutCounter
   
-  `CheckoutCounter.generate_bill/1` Generates the the net total for the items in the list after applying discount rules. Discount rules can be updated and recompiled for hot reloading.
+  `CheckoutCounter.generate_bill/1` generates the the net total for the items in the list after applying discount rules. Discount rules can be updated and recompiled for hot reloading.
 
-  Implement a new discount rule for each item_code added if required.
+  Implement `Discounting.DiscountingRule` for a new discount rule against an item_code and update `Discounting.Manager` config.
 
-  `mix test` to run the test against given cases.
+  Data is fetched against a dummy `Inventory`.
 
+  `mix deps.get && mix test` to run the test against given cases.
