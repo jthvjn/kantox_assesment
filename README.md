@@ -1,21 +1,8 @@
 # CheckoutCounter
+  
+  `CheckoutCounter.generate_bill/1` Generates the the net total for the items in the list after applying discount rules. Discount rules can be updated and recompiled for hot reloading.
 
-**TODO: Add description**
+  Implement a new discount rule for each item_code added if required.
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `checkout_counter` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:checkout_counter, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/checkout_counter>.
+  `mix test` to run the test against given cases.
 

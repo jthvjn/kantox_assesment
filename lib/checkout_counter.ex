@@ -4,15 +4,17 @@ defmodule CheckoutCounter do
   """
 
   @doc """
-  Gnerates the the net total for the items in the list
+  Generates the the net total for the items in the list
   after applying discount rules.
   """
-  @spec generate_bill(any()) :: float()
+  @spec generate_bill(list(String.t())) :: {:ok, float()} | {:error, :invalid_items}
   def generate_bill(item_codes) do
     if Inventory.items_available?(item_codes) do
-      {:ok,
-       calculate_net_total(item_codes)
-       |> Decimal.to_float()}
+      {
+        :ok,
+        calculate_net_total(item_codes)
+        |> Decimal.to_float()
+      }
     else
       {:error, :invalid_items}
     end

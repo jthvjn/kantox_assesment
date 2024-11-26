@@ -12,6 +12,9 @@ defmodule Discounting.Manager do
   }
 
   ## Public APIs
+  @doc """
+    Calculate the net price of some quantity of item after applying dicounts.
+  """
   @spec apply_discount(String.t(), float(), non_neg_integer()) :: any()
   def apply_discount(item_code, price, quantity) do
     GenServer.call(__MODULE__, {:apply_discount, item_code, price, quantity})

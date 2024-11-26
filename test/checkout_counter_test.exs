@@ -6,6 +6,7 @@ defmodule CheckoutCounterTest do
     assert {:ok, 3.11} == CheckoutCounter.generate_bill(["GR1", "GR1"])
     assert {:ok, 16.61} == CheckoutCounter.generate_bill(["SR1", "SR1", "GR1", "SR1"])
     assert {:ok, 30.57} == CheckoutCounter.generate_bill(["GR1", "CF1", "SR1", "CF1", "CF1"])
+    assert {:ok, 0} == CheckoutCounter.generate_bill([])
   end
 
   test "generate_bill/1, on invalid item codes" do
