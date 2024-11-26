@@ -1,4 +1,4 @@
-defmodule Discounting.Cf1Test do
+defmodule Discounting.DiscountingRules.Cf1Test do
   use ExUnit.Case
 
   @price 11.23
