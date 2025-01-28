@@ -7,3 +7,6 @@
   Data is fetched against a dummy `Inventory`.
 
   `mix deps.get && mix test` to run the test against given cases.
+
+Updates:
+1. Each counter on billing can start an agent, providing an interface to add/edit items in the cart and check-out in the end.
